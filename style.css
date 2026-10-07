@@ -1,0 +1,146 @@
+:root {
+  --cor-primaria: #ffffff;
+  --cor-erro: #dc2626;
+  --cor-sucesso: #16a34a;
+  --cor-borda: #c0c0c0;
+  --cor-texto: #ffffff;
+  --cor-fundo: #767cff;
+  --cor-card: #5148fc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  font-family: system-ui, sans-serif;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+.card {
+  width: 100%;
+  max-width: 480px;
+  background: var(--cor-card);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .3);
+}
+
+h1 {
+  margin: 0 0 .25rem;
+}
+
+.subtitulo {
+  margin: 0 0 1.5rem;
+  color: #ffffff;
+  font-size: .9rem;
+}
+
+.campo {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  margin-bottom: .35rem;
+  font-weight: 600;
+  font-size: .9rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: .7rem .85rem;
+  font: inherit;
+  border: 2px solid var(--cor-borda);
+  border-radius: 8px;
+  background: white;
+  color: black;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* Foco */
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--cor-primaria);
+}
+
+/* Mensagem de erro */
+
+.erro {
+  display: none;
+  margin-top: .3rem;
+  color: var(--cor-erro);
+  font-size: .8rem;
+}
+
+/* Campo inválido */
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border-color: var(--cor-erro);
+}
+
+
+/* Campo válido */
+
+input:valid,
+select:valid,
+textarea:valid {
+  border-color: var(--cor-sucesso);
+}
+
+/* Botão */
+
+button {
+  width: 100%;
+  padding: .85rem;
+  font: inherit;
+  font-weight: 600;
+  color: black;
+  background:#2908ff;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Botão desabilitado */
+
+button:disabled {
+  background: #5338ff;
+  cursor: not-allowed;
+    color: black;
+}
+
+/* Botão quando passar o mouse */
+
+button:hover {
+  background: #3927ff;
+  color: black;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .3);
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1.25rem;
+  }
+}
